@@ -3,4 +3,12 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\valheim.targets" />
+
+  <ItemGroup>
+    <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\*.*" Link="Plugins\%(FileName)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Include="@(Content)" />
+  </ItemGroup>
 </Project>
