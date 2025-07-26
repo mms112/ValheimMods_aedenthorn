@@ -3,4 +3,99 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\valheim.targets" />
+  
+  <ItemGroup>
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorBronzeChest.json" Link="Plugins\ArmorBronzeChest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorBronzeLegs.json" Link="Plugins\ArmorBronzeLegs.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorFenringChest.json" Link="Plugins\ArmorFenringChest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorFenringLegs.json" Link="Plugins\ArmorFenringLegs.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorIronChest.json" Link="Plugins\ArmorIronChest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorIronLegs.json" Link="Plugins\ArmorIronLegs.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorRootChest.json" Link="Plugins\ArmorRootChest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorRootLegs.json" Link="Plugins\ArmorRootLegs.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorTrollLeatherChest.json" Link="Plugins\ArmorTrollLeatherChest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorTrollLeatherLegs.json" Link="Plugins\ArmorTrollLeatherLegs.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArmorWolfChest.json" Link="Plugins\ArmorWolfChest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowBoneJVL.json" Link="Plugins\ArrowBoneJVL.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowBronze.json" Link="Plugins\ArrowBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowFire.json" Link="Plugins\ArrowFire.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowFlint.json" Link="Plugins\ArrowFlint.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowFrost.json" Link="Plugins\ArrowFrost.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowIron.json" Link="Plugins\ArrowIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowNeedle.json" Link="Plugins\ArrowNeedle.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowObsidian.json" Link="Plugins\ArrowObsidian.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowPoison.json" Link="Plugins\ArrowPoison.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ArrowSilver.json" Link="Plugins\ArrowSilver.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\AtgeirBronze.json" Link="Plugins\AtgeirBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\AtgeirIron.json" Link="Plugins\AtgeirIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\AxeBronze.json" Link="Plugins\AxeBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\AxeIron.json" Link="Plugins\AxeIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\Battleaxe.json" Link="Plugins\Battleaxe.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\BattleaxeCrystal.json" Link="Plugins\BattleaxeCrystal.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\BlackSoup.json" Link="Plugins\BlackSoup.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\BombOoze.json" Link="Plugins\BombOoze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\bonfire.json" Link="Plugins\bonfire.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\BowDraugrFang.json" Link="Plugins\BowDraugrFang.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\BowFineWood.json" Link="Plugins\BowFineWood.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\BowHuntsman.json" Link="Plugins\BowHuntsman.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\CapeWolf.json" Link="Plugins\CapeWolf.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\CarrotSoup.json" Link="Plugins\CarrotSoup.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\charcoal_kiln.json" Link="Plugins\charcoal_kiln.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\CoralCodRaw.json" Link="Plugins\CoralCodRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishAndBreadUncooked.json" Link="Plugins\FishAndBreadUncooked.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitForest.json" Link="Plugins\FishingBaitForest.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitMistlands.json" Link="Plugins\FishingBaitMistlands.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitOcean.json" Link="Plugins\FishingBaitOcean.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitOcean2.json" Link="Plugins\FishingBaitOcean2.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitPlains.json" Link="Plugins\FishingBaitPlains.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitSwamp.json" Link="Plugins\FishingBaitSwamp.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\FishingWeights.json" Link="Plugins\FishingWeights.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\GrouperRaw.json" Link="Plugins\GrouperRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HelmetBronze.json" Link="Plugins\HelmetBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HelmetDrake.json" Link="Plugins\HelmetDrake.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HelmetFishingHat.json" Link="Plugins\HelmetFishingHat.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HelmetIron.json" Link="Plugins\HelmetIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HelmetRoot.json" Link="Plugins\HelmetRoot.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HelmetTrollLeather.json" Link="Plugins\HelmetTrollLeather.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\HerringRaw.json" Link="Plugins\HerringRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\KnifeChitin.json" Link="Plugins\KnifeChitin.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\KnifeSilver.json" Link="Plugins\KnifeSilver.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MaceBronze.json" Link="Plugins\MaceBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MaceIron.json" Link="Plugins\MaceIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MagmaRaw.json" Link="Plugins\MagmaRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseBugRepellent.json" Link="Plugins\MeadBaseBugRepellent.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseFrostResist.json" Link="Plugins\MeadBaseFrostResist.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseHealthMedium.json" Link="Plugins\MeadBaseHealthMedium.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseHealthMinor.json" Link="Plugins\MeadBaseHealthMinor.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBasePoisonResist.json" Link="Plugins\MeadBasePoisonResist.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseStaminaMedium.json" Link="Plugins\MeadBaseStaminaMedium.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseStaminaMinor.json" Link="Plugins\MeadBaseStaminaMinor.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseTasty.json" Link="Plugins\MeadBaseTasty.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_apiary.json" Link="Plugins\piece_apiary.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_cartographytable.json" Link="Plugins\piece_cartographytable.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_cookingstation_iron.json" Link="Plugins\piece_cookingstation_iron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\portal_wood.json" Link="Plugins\portal_wood.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SalmonRaw.json" Link="Plugins\SalmonRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\Sausages.json" Link="Plugins\Sausages.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SerpentStew.json" Link="Plugins\SerpentStew.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ShieldBoneTower.json" Link="Plugins\ShieldBoneTower.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\ShocklateSmoothie.json" Link="Plugins\ShocklateSmoothie.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SledgeIron.json" Link="Plugins\SledgeIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SledgeStagbreaker.json" Link="Plugins\SledgeStagbreaker.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\smelter.json" Link="Plugins\smelter.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SpearBronze.json" Link="Plugins\SpearBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SpearChitin.json" Link="Plugins\SpearChitin.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SpearElderbark.json" Link="Plugins\SpearElderbark.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SpearWolfFang.json" Link="Plugins\SpearWolfFang.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SwordBronze.json" Link="Plugins\SwordBronze.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SwordIron.json" Link="Plugins\SwordIron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\SwordSilver.json" Link="Plugins\SwordSilver.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\TetraRaw.json" Link="Plugins\TetraRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\TrollFishRaw.json" Link="Plugins\TrollFishRaw.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\TunaRaw.json" Link="Plugins\TunaRaw.json" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <UpToDateCheckInput Include="@(Content)" />
+  </ItemGroup>
 </Project>

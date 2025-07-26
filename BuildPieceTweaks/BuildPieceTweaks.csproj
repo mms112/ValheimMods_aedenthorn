@@ -3,4 +3,13 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\valheim.targets" />
+
+  <ItemGroup>
+    <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\piece_sharpstakes.json" Link="Plugins\piece_sharpstakes.json" />
+    <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\stake_wall.json" Link="Plugins\stake_wall.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Include="@(Content)" />
+  </ItemGroup>
 </Project>
