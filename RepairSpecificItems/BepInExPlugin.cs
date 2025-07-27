@@ -49,12 +49,12 @@ namespace RepairSpecificItems
             modKey = Config.Bind<string>("General", "ModifierKey", "left alt", "Key to hold in order to switch click to repair.");
             leftClick = Config.Bind<bool>("General", "LeftClick", true, "Use left click to repair (otherwise use right click).");
             hideRepairButton = Config.Bind<bool>("General", "HideRepairButton", true, "Hide the vanilla repair button.");
-            freeTooltipString = Config.Bind<string>("General", "FreeTooltipString", "<color=#00FF00FF>Repair: Free</color>", "String in tooltip for items that don't need resources to repair.");
+            freeTooltipString = Config.Bind<string>("General", "FreeTooltipString", "", "String in tooltip for items that don't need resources to repair.");
             hasEnoughTooltipString = Config.Bind<string>("General", "HasEnoughTooltipString", "<color=#00FF00FF>Repair: {0}</color>", "String in tooltip for items with enough resources and the correct crafting station to repair. {0} is replaced by the amounts needed.");
             hasEnoughExternalTooltipString = Config.Bind<string>("General", "HasEnoughExternalTooltipString", "<color=#FFFF00FF>Repair: {0}</color>", "String in tooltip for items with enough resources to repair, but at the wrong crafting station. {0} is replaced by the amounts needed.");
             notEnoughTooltipString = Config.Bind<string>("General", "NotEnoughTooltipString", "<color=#FF0000FF>Repair: {0}</color>", "String in tooltip for items with not enough resources to repair. {0} is replaced by the amounts needed.");
             materialRequirementMult = Config.Bind<float>("General", "MaterialRequirementMult", 0.5f, "Multiplier for amount of each material required.");
-            reducedItemNames = Config.Bind<string>("ItemLists", "ReduceMaterials", "$item_bronze,$item_iron,$item_silver,$item_copper", $"List of materials, which use a reduced amount, when they are needed for repair.");
+            reducedItemNames = Config.Bind<string>("ItemLists", "ReduceMaterials", "$item_bronze,$item_iron,$item_silver,$item_copper,$item_chitin", $"List of materials, which use a reduced amount, when they are needed for repair.");
             reducedMaterialRequirementMult = Config.Bind<float>("General", "ReducedMaterialRequirementMult", 0.25f, "Multiplier for amount of each reduced material required. It is applied for all materials, which are specified in the 'ReduceMaterials' list.");
 
             if (!modEnabled.Value)
