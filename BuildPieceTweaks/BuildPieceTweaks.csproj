@@ -7,6 +7,9 @@
   <ItemGroup>
     <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\piece_sharpstakes.json" Link="Plugins\piece_sharpstakes.json" />
     <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\stake_wall.json" Link="Plugins\stake_wall.json" />
+    <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\jute_carpet.json" Link="Plugins\jute_carpet.json" />
+    <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\jute_carpet_blue.json" Link="Plugins\jute_carpet_blue.json" />
+    <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\rug_fur.json" Link="Plugins\rug_fur.json" />
   </ItemGroup>
 
   <ItemGroup>

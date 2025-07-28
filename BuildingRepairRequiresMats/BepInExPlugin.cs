@@ -99,7 +99,7 @@ namespace BuildingRepairRequiresMats
 
                 if (HaveEnemyInRange(__instance, component.m_nview.m_zdo.m_position, enemyBuildRange.Value))
                 {
-                    __instance.Message(MessageHud.MessageType.Center, "Es sind Gegner in der Nähe", 0, null);
+                    __instance.Message(MessageHud.MessageType.Center, Localization.instance.Localize("$msg_bedenemiesnearby"), 0, null);
                     return false;
                 }
 
@@ -135,12 +135,12 @@ namespace BuildingRepairRequiresMats
                 if (__instance.HaveRequirementItems(recipe, false, 1))
                 {
                     __instance.ConsumeResources(recipe.m_resources, 1);
-                    outstring = $"{string.Join(", ", reqstring)} zur Reparatur von {Localization.instance.Localize(hoveringPiece.m_name)} verwendet";
+                    outstring = string.Format(Localization.instance.Localize("$repair_used_items"), string.Join(", ", reqstring), Localization.instance.Localize(hoveringPiece.m_name));
                     retValue = true;
                 }
                 else
                 {
-                    outstring = $"{string.Join(", ", reqstring)} zur Reparatur von {Localization.instance.Localize(hoveringPiece.m_name)} erforderlich";
+                    outstring = string.Format(Localization.instance.Localize("$repair_items_required"), string.Join(", ", reqstring), Localization.instance.Localize(hoveringPiece.m_name));
                     retValue = false;
                 }
 
@@ -159,7 +159,7 @@ namespace BuildingRepairRequiresMats
                 {
                     if (HaveEnemyInRange(__instance, __instance.m_nview.m_zdo.m_position, enemyBuildRange.Value))
                     {
-                        __instance.Message(MessageHud.MessageType.Center, "Es sind Gegner in der Nähe", 0, null);
+                        __instance.Message(MessageHud.MessageType.Center, Localization.instance.Localize("$msg_bedenemiesnearby"), 0, null);
                         return false;
                     }
                 }
@@ -184,7 +184,7 @@ namespace BuildingRepairRequiresMats
                     if (component.m_nview.GetZDO().GetFloat(ZDOVars.s_health, component.m_health) < component.m_health)
                     {
                         __result = false;
-                        __instance.Message(MessageHud.MessageType.Center, "Beschädigtes Objekt kann nicht abgerissen werden", 0, null);
+                        __instance.Message(MessageHud.MessageType.Center, Localization.instance.Localize("$repair_deconstruct_damaged"), 0, null);
                     }
                 }
             }
