@@ -51,7 +51,7 @@ namespace BuildingRepairRequiresMats
         {
             context = this;
             modEnabled = Config.Bind<bool>("General", "Enabled", true, "Enable this mod");
-            isDebug = Config.Bind<bool>("General", "IsDebug", true, "Enable debug logs");
+            isDebug = Config.Bind<bool>("General", "IsDebug", false, "Enable debug logs");
             materialRequirementMult = Config.Bind<float>("General", "MaterialRequirementMult", 0.5f, "Multiplier for amount of each material required.");
             enemyBuildRange = Config.Bind<float>("General", "EnemyBuildRange", 20.0f, "Minimum distance to the nearest enemy to allow building/repairing.");
             
