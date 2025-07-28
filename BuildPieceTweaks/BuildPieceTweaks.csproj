@@ -10,6 +10,11 @@
     <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\jute_carpet.json" Link="Plugins\jute_carpet.json" />
     <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\jute_carpet_blue.json" Link="Plugins\jute_carpet_blue.json" />
     <Content Include="$(SolutionDir)\Plugins\$(AssemblyName)\rug_fur.json" Link="Plugins\rug_fur.json" />
+    <Content Include="$(SolutionDir)\Plugins\BuildPieceTweaks\piece_jackoturnip.json" Link="Plugins\piece_jackoturnip.json" />
+    <Content Include="$(SolutionDir)\Plugins\BuildPieceTweaks\piece_mistletoe.json" Link="Plugins\piece_mistletoe.json" />
+    <Content Include="$(SolutionDir)\Plugins\BuildPieceTweaks\piece_xmascrown.json" Link="Plugins\piece_xmascrown.json" />
+    <Content Include="$(SolutionDir)\Plugins\BuildPieceTweaks\piece_xmasgarland.json" Link="Plugins\piece_xmasgarland.json" />
+    <Content Include="$(SolutionDir)\Plugins\BuildPieceTweaks\piece_xmastree.json" Link="Plugins\piece_xmastree.json" />
   </ItemGroup>
 
   <ItemGroup>

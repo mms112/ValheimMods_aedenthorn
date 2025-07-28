@@ -74,6 +74,12 @@
     <Content Include="..\..\Plugins\RecipeCustomization\piece_apiary.json" Link="Plugins\piece_apiary.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_cartographytable.json" Link="Plugins\piece_cartographytable.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_cookingstation_iron.json" Link="Plugins\piece_cookingstation_iron.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_jackoturnip.json" Link="Plugins\piece_jackoturnip.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_maypole.json" Link="Plugins\piece_maypole.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_mistletoe.json" Link="Plugins\piece_mistletoe.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_xmascrown.json" Link="Plugins\piece_xmascrown.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_xmasgarland.json" Link="Plugins\piece_xmasgarland.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_xmastree.json" Link="Plugins\piece_xmastree.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\portal_wood.json" Link="Plugins\portal_wood.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\SalmonRaw.json" Link="Plugins\SalmonRaw.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\Sausages.json" Link="Plugins\Sausages.json" />
