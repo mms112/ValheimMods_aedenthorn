@@ -215,6 +215,10 @@ namespace RepairSpecificItems
 
             float percent = (item.GetMaxDurability() - item.m_durability) / item.GetMaxDurability();
             Recipe fullRecipe = ObjectDB.instance.GetRecipe(item);
+
+            if (fullRecipe == null)
+                return null;
+
             var fullReqs = fullRecipe.m_resources.ToList();
 
             bool isMagic = false;
