@@ -24,10 +24,6 @@ namespace RepairSpecificItems
         public static ConfigEntry<float> reducedMaterialRequirementMult;
         public static ConfigEntry<string> modKey;
         public static ConfigEntry<string> titleTooltipColor;
-        public static ConfigEntry<string> freeTooltipString;
-        public static ConfigEntry<string> hasEnoughExternalTooltipString;
-        public static ConfigEntry<string> hasEnoughTooltipString;
-        public static ConfigEntry<string> notEnoughTooltipString;
         public static ConfigEntry<int> nexusID;
         public static List<Container> containerList = new List<Container>();
 
@@ -49,10 +45,6 @@ namespace RepairSpecificItems
             modKey = Config.Bind<string>("General", "ModifierKey", "left alt", "Key to hold in order to switch click to repair.");
             leftClick = Config.Bind<bool>("General", "LeftClick", true, "Use left click to repair (otherwise use right click).");
             hideRepairButton = Config.Bind<bool>("General", "HideRepairButton", true, "Hide the vanilla repair button.");
-            freeTooltipString = Config.Bind<string>("General", "FreeTooltipString", "", "String in tooltip for items that don't need resources to repair.");
-            hasEnoughTooltipString = Config.Bind<string>("General", "HasEnoughTooltipString", "<color=#00FF00FF>Repair: {0}</color>", "String in tooltip for items with enough resources and the correct crafting station to repair. {0} is replaced by the amounts needed.");
-            hasEnoughExternalTooltipString = Config.Bind<string>("General", "HasEnoughExternalTooltipString", "<color=#FFFF00FF>Repair: {0}</color>", "String in tooltip for items with enough resources to repair, but at the wrong crafting station. {0} is replaced by the amounts needed.");
-            notEnoughTooltipString = Config.Bind<string>("General", "NotEnoughTooltipString", "<color=#FF0000FF>Repair: {0}</color>", "String in tooltip for items with not enough resources to repair. {0} is replaced by the amounts needed.");
             materialRequirementMult = Config.Bind<float>("General", "MaterialRequirementMult", 0.5f, "Multiplier for amount of each material required.");
             reducedItemNames = Config.Bind<string>("ItemLists", "ReduceMaterials", "", $"List of materials, which use a reduced amount, when they are needed for repair.");
             reducedMaterialRequirementMult = Config.Bind<float>("General", "ReducedMaterialRequirementMult", 0.25f, "Multiplier for amount of each reduced material required. It is applied for all materials, which are specified in the 'ReduceMaterials' list.");
@@ -144,12 +136,7 @@ namespace RepairSpecificItems
                         return;
 
                     Recipe recipe = RepairRecipe(item);
-                    if (recipe == null)
-                    {
-                        __result += "\n" + freeTooltipString.Value;
-
-                    }
-                    else
+                    if (recipe != null)
                     {
                         bool playerEnough = true;
                         List<string> reqstring = new List<string>();
@@ -165,14 +152,14 @@ namespace RepairSpecificItems
 
                         if (Player.m_localPlayer.HaveRequirements(recipe, false, 1))
                         {
-                            __result += "\n" + string.Format(hasEnoughTooltipString.Value, string.Join(", ", reqstring));
+                            __result += "\n" + string.Format(Localization.instance.Localize("$repair_enough"), string.Join(", ", reqstring));
                         }
                         else
                         {
                             if (playerEnough)
-                                __result += "\n" + string.Format(hasEnoughExternalTooltipString.Value, string.Join(", ", reqstring));
+                                __result += "\n" + string.Format(Localization.instance.Localize("$repair_enough_external"), string.Join(", ", reqstring));
                             else
-                                __result += "\n" + string.Format(notEnoughTooltipString.Value, string.Join(", ", reqstring));
+                                __result += "\n" + string.Format(Localization.instance.Localize("$repair_not_enough"), string.Join(", ", reqstring));
                         }
                     }
                 }
@@ -207,12 +194,12 @@ namespace RepairSpecificItems
                     if (Player.m_localPlayer.HaveRequirements(recipe, false, 1))
                     {
                         Player.m_localPlayer.ConsumeResources(recipe.m_resources, 1);
-                        outstring = $"{string.Join(", ", reqstring)} zur Reparatur von {Localization.instance.Localize(item.m_shared.m_name)} verwendet";
+                        outstring = string.Format(Localization.instance.Localize("$repair_used_items"), string.Join(", ", reqstring), Localization.instance.Localize(item.m_shared.m_name));
                         __result = true;
                     }
                     else
                     {
-                        outstring = $"{string.Join(", ", reqstring)} zur Reparatur von {Localization.instance.Localize(item.m_shared.m_name)} erforderlich";
+                        outstring = string.Format(Localization.instance.Localize("$repair_items_required"), string.Join(", ", reqstring), Localization.instance.Localize(item.m_shared.m_name));
                         __result = false;
                     }
 

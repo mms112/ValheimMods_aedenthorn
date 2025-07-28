@@ -1,0 +1,7 @@
+{
+  "repair_enough_external": "<color=#FFFF00FF>Repair: {0}",
+  "repair_not_enough": "<color=#FF0000FF>Repair: {0}",
+  "repair_enough": "<color=#00FF00FF>Repair: {0}",
+  "repair_used_items": "{0} used to repair {1}",
+  "repair_items_required": "{0} required to repair {1}"
+}
