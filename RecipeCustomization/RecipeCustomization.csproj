@@ -41,28 +41,23 @@
     <Content Include="..\..\Plugins\RecipeCustomization\CapeWolf.json" Link="Plugins\CapeWolf.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\CarrotSoup.json" Link="Plugins\CarrotSoup.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\charcoal_kiln.json" Link="Plugins\charcoal_kiln.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\CoralCodRaw.json" Link="Plugins\CoralCodRaw.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishAndBreadUncooked.json" Link="Plugins\FishAndBreadUncooked.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitForest.json" Link="Plugins\FishingBaitForest.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitMistlands.json" Link="Plugins\FishingBaitMistlands.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitOcean.json" Link="Plugins\FishingBaitOcean.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitOcean2.json" Link="Plugins\FishingBaitOcean2.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitPlains.json" Link="Plugins\FishingBaitPlains.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitSwamp.json" Link="Plugins\FishingBaitSwamp.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingWeights.json" Link="Plugins\FishingWeights.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\GrouperRaw.json" Link="Plugins\GrouperRaw.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\HelmetBronze.json" Link="Plugins\HelmetBronze.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\HelmetDrake.json" Link="Plugins\HelmetDrake.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\HelmetFishingHat.json" Link="Plugins\HelmetFishingHat.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\HelmetIron.json" Link="Plugins\HelmetIron.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\HelmetRoot.json" Link="Plugins\HelmetRoot.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\HelmetTrollLeather.json" Link="Plugins\HelmetTrollLeather.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\HerringRaw.json" Link="Plugins\HerringRaw.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\KnifeChitin.json" Link="Plugins\KnifeChitin.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\KnifeSilver.json" Link="Plugins\KnifeSilver.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\MaceBronze.json" Link="Plugins\MaceBronze.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\MaceIron.json" Link="Plugins\MaceIron.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\MagmaRaw.json" Link="Plugins\MagmaRaw.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseBugRepellent.json" Link="Plugins\MeadBaseBugRepellent.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseFrostResist.json" Link="Plugins\MeadBaseFrostResist.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseHealthMedium.json" Link="Plugins\MeadBaseHealthMedium.json" />
@@ -72,6 +67,7 @@
     <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseStaminaMinor.json" Link="Plugins\MeadBaseStaminaMinor.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\MeadBaseTasty.json" Link="Plugins\MeadBaseTasty.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_apiary.json" Link="Plugins\piece_apiary.json" />
+    <Content Include="..\..\Plugins\RecipeCustomization\piece_beehive.json" Link="Plugins\piece_beehive.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_cartographytable.json" Link="Plugins\piece_cartographytable.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_cookingstation_iron.json" Link="Plugins\piece_cookingstation_iron.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_jackoturnip.json" Link="Plugins\piece_jackoturnip.json" />
@@ -81,7 +77,6 @@
     <Content Include="..\..\Plugins\RecipeCustomization\piece_xmasgarland.json" Link="Plugins\piece_xmasgarland.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\piece_xmastree.json" Link="Plugins\piece_xmastree.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\portal_wood.json" Link="Plugins\portal_wood.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\SalmonRaw.json" Link="Plugins\SalmonRaw.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\Sausages.json" Link="Plugins\Sausages.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\SerpentStew.json" Link="Plugins\SerpentStew.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\ShieldBoneTower.json" Link="Plugins\ShieldBoneTower.json" />
@@ -96,9 +91,6 @@
     <Content Include="..\..\Plugins\RecipeCustomization\SwordBronze.json" Link="Plugins\SwordBronze.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\SwordIron.json" Link="Plugins\SwordIron.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\SwordSilver.json" Link="Plugins\SwordSilver.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\TetraRaw.json" Link="Plugins\TetraRaw.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\TrollFishRaw.json" Link="Plugins\TrollFishRaw.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\TunaRaw.json" Link="Plugins\TunaRaw.json" />
   </ItemGroup>
   
   <ItemGroup>
