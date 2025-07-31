@@ -38,7 +38,6 @@
     <Content Include="..\..\Plugins\RecipeCustomization\BowFineWood.json" Link="Plugins\BowFineWood.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\BowHuntsman.json" Link="Plugins\BowHuntsman.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\CapeWolf.json" Link="Plugins\CapeWolf.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\CarrotSoup.json" Link="Plugins\CarrotSoup.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\charcoal_kiln.json" Link="Plugins\charcoal_kiln.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishAndBreadUncooked.json" Link="Plugins\FishAndBreadUncooked.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\FishingBaitForest.json" Link="Plugins\FishingBaitForest.json" />
