@@ -46,7 +46,7 @@ namespace RepairSpecificItems
             leftClick = Config.Bind<bool>("General", "LeftClick", true, "Use left click to repair (otherwise use right click).");
             hideRepairButton = Config.Bind<bool>("General", "HideRepairButton", true, "Hide the vanilla repair button.");
             materialRequirementMult = Config.Bind<float>("General", "MaterialRequirementMult", 0.5f, "Multiplier for amount of each material required.");
-            reducedItemNames = Config.Bind<string>("ItemLists", "ReduceMaterials", "$item_bronze,$item_iron,$item_silver,$item_copper,$item_chitin", $"List of materials, which use a reduced amount, when they are needed for repair.");
+            reducedItemNames = Config.Bind<string>("ItemLists", "ReduceMaterials", "", $"List of materials, which use a reduced amount, when they are needed for repair.");
             reducedMaterialRequirementMult = Config.Bind<float>("General", "ReducedMaterialRequirementMult", 0.25f, "Multiplier for amount of each reduced material required. It is applied for all materials, which are specified in the 'ReduceMaterials' list.");
 
             if (!modEnabled.Value)

@@ -16,7 +16,6 @@
     <Content Include="..\..\Plugins\RecipeCustomization\ArmorTrollLeatherChest.json" Link="Plugins\ArmorTrollLeatherChest.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\ArmorTrollLeatherLegs.json" Link="Plugins\ArmorTrollLeatherLegs.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\ArmorWolfChest.json" Link="Plugins\ArmorWolfChest.json" />
-    <Content Include="..\..\Plugins\RecipeCustomization\ArrowBoneJVL.json" Link="Plugins\ArrowBoneJVL.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\ArrowBronze.json" Link="Plugins\ArrowBronze.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\ArrowFire.json" Link="Plugins\ArrowFire.json" />
     <Content Include="..\..\Plugins\RecipeCustomization\ArrowFlint.json" Link="Plugins\ArrowFlint.json" />
