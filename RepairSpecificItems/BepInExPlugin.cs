@@ -7,13 +7,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+using ServerSync;
 
 namespace RepairSpecificItems
 {
-    [BepInPlugin("aedenthorn.RepairSpecificItems", "Repair Specific Items", "0.3.4")]
+    [BepInPlugin(pluginID, pluginName, pluginVersion)]
     public class BepInExPlugin : BaseUnityPlugin
     {
+        private const string pluginID = "aedenthorn.RepairSpecificItems";
+        private const string pluginName = "Repair Specific Items";
+        private const string pluginVersion = "0.3.4";
 
+        internal static readonly ConfigSync configSync = new ConfigSync(pluginID) { DisplayName = pluginName, CurrentVersion = pluginVersion, MinimumRequiredVersion = pluginVersion };
+
+        private static ConfigEntry<bool> configLocked;
         public static ConfigEntry<bool> modEnabled;
         public static ConfigEntry<bool> isDebug;
         public static ConfigEntry<bool> requireMats;
@@ -38,16 +45,19 @@ namespace RepairSpecificItems
         public void Awake()
         {
             context = this;
-            modEnabled = Config.Bind<bool>("General", "Enabled", true, "Enable this mod");
-            isDebug = Config.Bind<bool>("General", "IsDebug", false, "Enable debug logs");
-            nexusID = Config.Bind<int>("General", "NexusID", 1011, "Nexus mod ID for updates");
-            requireMats = Config.Bind<bool>("General", "RequireMats", true, "Require materials to repair.");
-            modKey = Config.Bind<string>("General", "ModifierKey", "left alt", "Key to hold in order to switch click to repair.");
-            leftClick = Config.Bind<bool>("General", "LeftClick", true, "Use left click to repair (otherwise use right click).");
-            hideRepairButton = Config.Bind<bool>("General", "HideRepairButton", true, "Hide the vanilla repair button.");
-            materialRequirementMult = Config.Bind<float>("General", "MaterialRequirementMult", 0.5f, "Multiplier for amount of each material required.");
-            reducedItemNames = Config.Bind<string>("ItemLists", "ReduceMaterials", "", $"List of materials, which use a reduced amount, when they are needed for repair.");
-            reducedMaterialRequirementMult = Config.Bind<float>("General", "ReducedMaterialRequirementMult", 0.25f, "Multiplier for amount of each reduced material required. It is applied for all materials, which are specified in the 'ReduceMaterials' list.");
+            modEnabled = config("General", "Enabled", true, "Enable this mod");
+            configLocked = config("General", "LockConfiguration", true, "Configuration is locked and can be changed by server admins only.");
+            isDebug = config("General", "IsDebug", false, "Enable debug logs", false);
+            nexusID = config("General", "NexusID", 1011, "Nexus mod ID for updates", false);
+            requireMats = config("General", "RequireMats", true, "Require materials to repair.");
+            modKey = config("General", "ModifierKey", "left alt", "Key to hold in order to switch click to repair.", false);
+            leftClick = config("General", "LeftClick", true, "Use left click to repair (otherwise use right click).", false);
+            hideRepairButton = config("General", "HideRepairButton", true, "Hide the vanilla repair button.", false);
+            materialRequirementMult = config("General", "MaterialRequirementMult", 0.5f, "Multiplier for amount of each material required.");
+            reducedItemNames = config("ItemLists", "ReduceMaterials", "", $"List of materials, which use a reduced amount, when they are needed for repair.");
+            reducedMaterialRequirementMult = config("General", "ReducedMaterialRequirementMult", 0.25f, "Multiplier for amount of each reduced material required. It is applied for all materials, which are specified in the 'ReduceMaterials' list.");
+
+            configSync.AddLockingConfigEntry(configLocked);
 
             if (!modEnabled.Value)
                 return;
@@ -55,6 +65,24 @@ namespace RepairSpecificItems
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
 
         }
+
+        ConfigEntry<T> config<T>(string group, string name, T defaultValue, ConfigDescription description, bool synchronizedSetting = true)
+        {
+            ConfigDescription extendedDescription = new ConfigDescription(
+                description.Description +
+                (synchronizedSetting ? " [Synced with Server]" : " [Not Synced with Server]"),
+                description.AcceptableValues, description.Tags);
+
+            ConfigEntry<T> configEntry = Config.Bind(group, name, defaultValue, extendedDescription);
+
+            SyncedConfigEntry<T> syncedConfigEntry = configSync.AddConfigEntry(configEntry);
+            syncedConfigEntry.SynchronizedConfig = synchronizedSetting;
+
+            return configEntry;
+        }
+
+        ConfigEntry<T> config<T>(string group, string name, T defaultValue, string description, bool synchronizedSetting = true) => config(group, name, defaultValue, new ConfigDescription(description), synchronizedSetting);
+
         public void Start()
         {
             if(Chainloader.PluginInfos.ContainsKey("randyknapp.mods.epicloot"))
