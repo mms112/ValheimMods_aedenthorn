@@ -177,18 +177,25 @@ namespace RepairSpecificItems
                                 playerEnough = false;
                         }
 
+                        string repairString;
 
                         if (Player.m_localPlayer.HaveRequirements(recipe, false, 1))
                         {
-                            __result += "\n" + string.Format(Localization.instance.Localize("$repair_enough"), string.Join(", ", reqstring));
+                            repairString = "\n" + string.Format(Localization.instance.Localize("$repair_enough"), string.Join(", ", reqstring));
                         }
                         else
                         {
                             if (playerEnough)
-                                __result += "\n" + string.Format(Localization.instance.Localize("$repair_enough_external"), string.Join(", ", reqstring));
+                                repairString = "\n" + string.Format(Localization.instance.Localize("$repair_enough_external"), string.Join(", ", reqstring));
                             else
-                                __result += "\n" + string.Format(Localization.instance.Localize("$repair_not_enough"), string.Join(", ", reqstring));
+                                repairString = "\n" + string.Format(Localization.instance.Localize("$repair_not_enough"), string.Join(", ", reqstring));
                         }
+
+                        int setEffectPos = __result.IndexOf("\n\n$item_seteffect", StringComparison.InvariantCulture);
+                        if (setEffectPos >= 0)
+                            __result = __result.Insert(setEffectPos, repairString);
+                        else
+                            __result += repairString;
                     }
                 }
             }
