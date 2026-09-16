@@ -90,7 +90,7 @@ namespace RepairSpecificItems
 
         }
 
-        [HarmonyPatch(typeof(InventoryGrid), "OnLeftClick")]
+        [HarmonyPatch(typeof(InventoryGrid), nameof(InventoryGrid.OnLeftDown))]
         public static class OnLeftClick_Patch
         {
             public static bool Prefix(InventoryGrid __instance, UIInputHandler clickHandler, Inventory ___m_inventory)
@@ -105,7 +105,7 @@ namespace RepairSpecificItems
 
         }
 
-        [HarmonyPatch(typeof(InventoryGrid), "OnRightClick")]
+        [HarmonyPatch(typeof(InventoryGrid), nameof(InventoryGrid.OnRightDown))]
         public static class OnRightClick_Patch
         {
             public static bool Prefix(InventoryGrid __instance, UIInputHandler element, Inventory ___m_inventory)
@@ -149,7 +149,7 @@ namespace RepairSpecificItems
             }
         }
 
-        [HarmonyPatch(typeof(ItemDrop.ItemData), nameof(ItemDrop.ItemData.GetTooltip), new Type[] { typeof(ItemDrop.ItemData), typeof(int), typeof(bool), typeof(float), typeof(int) })]
+        [HarmonyPatch(typeof(ItemDrop.ItemData), nameof(ItemDrop.ItemData.GetTooltip), new Type[] { typeof(ItemDrop.ItemData), typeof(int), typeof(bool), typeof(float), typeof(int), typeof(bool) })]
         public static class GetTooltip_Patch
         {
             public static void Postfix(ItemDrop.ItemData item, int qualityLevel, bool crafting, ref string __result)
