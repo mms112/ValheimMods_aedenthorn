@@ -144,6 +144,11 @@ namespace RecipeCustomization
                         string[] parts = req.Split(':');
                         reqs.Add(new Piece.Requirement() { m_resItem = ObjectDB.instance.GetItemPrefab(parts[0]).GetComponent<ItemDrop>(), m_amount = int.Parse(parts[1]), m_amountPerLevel = int.Parse(parts[2]), m_recover = parts[3].ToLower() == "true" });
                     }
+                    foreach (var req in ObjectDB.instance.m_recipes[i].m_resources)
+                    {
+                        if (req.m_upgraderResource)
+                            reqs.Add(req);
+                    }
                     ObjectDB.instance.m_recipes[i].m_resources = reqs.ToArray();
                     return;
                 }
