@@ -284,7 +284,8 @@ namespace RepairSpecificItems
 
                 if (item.m_quality > 0)
                 {
-                    amount = ((2 * fullReqs[i].m_amountPerLevel * (item.m_quality - 1)) / 3.0f) + fullReqs[i].m_amount;
+                    float quality = (item.m_quality > 4) ? (item.m_quality * 0.75f) : (item.m_quality - 1.0f);
+                    amount = ((2 * fullReqs[i].m_amountPerLevel * quality) / 3.0f) + fullReqs[i].m_amount;
                 }
 
                 int fraction = Mathf.RoundToInt(amount * percent * multVal);
